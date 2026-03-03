@@ -1,14 +1,19 @@
-import { useState } from 'react'
+
 import './App.css'
 import AppProviders from './contexts/AppProvider'
+import ToDoInput from './components/ToDoInput'
+import ToDoList from './components/ToDoList'
+import FilterButtons from './components/FilterButtons'
+import ThemeButton from './components/ThemeButton'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <AppProviders>
-    <ToDoInput onChange={handleChange}/>
-    <ToDoList/>
+        <ThemeButton/>
+        <ToDoInput/>
+        <FilterButtons/>
+        <ToDoList/>
     </AppProviders>
   )
 }
